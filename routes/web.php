@@ -24,7 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // Admin Routes
 
-Route::group(['middleware' => ['auth','admin'] ], function () {
+Route::group(['middleware' => ['auth'] ], function () {
 
 	Route::get('admin', function() {
 		return redirect('admin/dashboard');
@@ -34,7 +34,8 @@ Route::group(['middleware' => ['auth','admin'] ], function () {
 
 	Route::resource('admin/admins', 'Admin\AdminController', ['except' => ['show']]);
 
-	Route::resource('admin/users', 'Admin\UserController', ['except' => ['show']]);
+    Route::resource('admin/users', 'Admin\UserController', ['except' => ['show']]);
+    Route::resource('admin/tracks', 'Admin\TrackController');
 
 	Route::get('admin/profile', ['as' => 'profile.edit', 'uses' => 'Admin\ProfileController@edit']);
 

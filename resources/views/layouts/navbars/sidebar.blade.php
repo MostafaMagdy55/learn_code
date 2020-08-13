@@ -132,6 +132,11 @@
                 </li>
 
                 <li class="nav-item">
+                    <a class="nav-link" href="\admin/track">
+                        <i class="ni ni-planet text-blue"></i> {{ __('Track') }}
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">
                         <i class="ni ni-planet text-blue"></i> {{ __('Courses') }}
                     </a>
@@ -151,16 +156,7 @@
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Questions') }}
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-key-25 text-info"></i> {{ __('Login') }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="ni ni-circle-08 text-pink"></i> {{ __('Register') }}
-                    </a>
-                </li>
+
             </ul>
             <!-- Divider -->
             <hr class="my-3">

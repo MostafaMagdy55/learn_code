@@ -18,6 +18,6 @@ class Track extends Model
     public function courses()
     {
 
-        return $this->hasMany('Course');
+        return $this->hasMany('App\Course');
     }
 }
