@@ -132,27 +132,27 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="\admin/track">
+                    <a class="nav-link" href="\admin/tracks">
                         <i class="ni ni-planet text-blue"></i> {{ __('Track') }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/admin/courses">
                         <i class="ni ni-planet text-blue"></i> {{ __('Courses') }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ route('videos.index') }}">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Videos') }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ route('quizzes.index') }}">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Quizzes') }}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="{{ route('questions.index') }}">
                         <i class="ni ni-pin-3 text-orange"></i> {{ __('Questions') }}
                     </a>
                 </li>

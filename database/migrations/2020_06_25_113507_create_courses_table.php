@@ -15,7 +15,7 @@ class CreateCoursesTable extends Migration
     {
         Schema::create('courses', function (Blueprint $table) {
             $table->id()->unsigned();
-            $table->string('title',500);
+            $table->string('title',500)->default('mostafa');
             $table->integer('status')->default(0);
             $table->string('link',500);
             $table->bigInteger('track_id')->unsigned();

@@ -7,8 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Photo extends Model
 {
     protected $fillable=[
-    'filename',
+    'filename','photoable_id','photoable_type'
     ];
+    protected $table = 'photoable';
 
     public function photoable()
     {

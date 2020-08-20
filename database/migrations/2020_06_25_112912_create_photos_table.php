@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreatePhotosTable extends Migration
 {
@@ -14,7 +14,7 @@ class CreatePhotosTable extends Migration
     public function up()
     {
         Schema::create('photoable', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->string('filename');
             $table->integer('photoable_id');
             $table->string('photoable_type');

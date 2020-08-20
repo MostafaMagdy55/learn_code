@@ -15,7 +15,7 @@ class Track extends Model
         return $this->belongsTo('App\User');
 
     }
-    public function courses()
+    public function course()
     {
 
         return $this->hasMany('App\Course');

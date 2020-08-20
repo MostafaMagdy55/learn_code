@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateQuestionsTable extends Migration
 {
@@ -14,13 +14,16 @@ class CreateQuestionsTable extends Migration
     public function up()
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->id();
-            $table->string('title',500);
-            $table->string('answers',500);
-            $table->string('right_answers',500);
+            $table->bigIncrements('id');
+            $table->string('title', 500);
+            $table->string('answers', 500);
+            $table->string('right_answer', 500);
             $table->integer('score');
+
             $table->bigInteger('quiz_id')->unsigned();
+
             $table->foreign('quiz_id')->references('id')->on('quizzes')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

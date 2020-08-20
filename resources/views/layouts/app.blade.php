@@ -31,6 +31,7 @@
 
         <!-- Argon CSS -->
         <link type="text/css" href="/assets/css/argon.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/admin_custom.css') }}">
 
     </head>
     <body class="{{ $class ?? '' }}">
@@ -40,7 +41,7 @@
             </form>
             @include('layouts.navbars.sidebar')
         @endauth
-        
+
         <div class="main-content">
             @include('layouts.navbars.navbar')
             @yield('content')
@@ -52,9 +53,9 @@
 
         <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
         <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-        
+
         @stack('js')
-        
+
         <!-- Argon JS -->
         <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>
 

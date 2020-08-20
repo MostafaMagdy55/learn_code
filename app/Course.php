@@ -8,14 +8,15 @@ class Course extends Model
 {
     protected $fillable=[
         'title',
-        'status'
+        'status',
+        'link',
+        'track_id',
+
     ];
 
-    public function photo()
-    {
-        return $this->morphTo('App\Photo');
+    public function photo() {
+        return $this->morphOne('App\Photo', 'photoable');
     }
-
 
     public function usres()
     {
@@ -35,6 +36,6 @@ class Course extends Model
     }
     public function videos()
     {
-        return $this->hasMany('App\videos');
+        return $this->hasMany('App\Video');
     }
 }
